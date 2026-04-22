@@ -100,7 +100,7 @@ while running:
         spawn_time1+=dt
         coins_to_remove=[]
         for monets in move_coin:
-            monets[2]+=speed+2
+            monets[2]+=3
             screen.blit(monets[0],(monets[1],monets[2]))
             coin_rect=monets[0].get_rect(topleft=(monets[1],monets[2]))
             if car_rect.colliderect(coin_rect):
@@ -205,7 +205,7 @@ while running:
             bool_speed1=True
             bool_speed2=True
             bool_speed3=True
-            car_x = 170              #restart all variables
+            car_x = 170                                                             #restart all variables
         if exit_soz_rect.collidepoint(mouse) and pygame.mouse.get_pressed()[0]:
             running=False
             pygame.quit()
